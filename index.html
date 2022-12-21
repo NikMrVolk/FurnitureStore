@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Мебельный магазин</title>
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -14,40 +15,40 @@
 		<form action="#">
 			<input type="text">
 		</form>
-		<nav>
-			<a href="catalog.html">Каталог</a>
-			<a href="">Корзина</a>
+		<nav class="navigation">
+			<a href="catalog.html" class="navigation__link">Каталог</a>
+			<a href="" class="navigation__link">Корзина</a>
 		</nav>
 	</header>
-	<section>
-		<h1>Всё, чего заслуживает ваш дом</h1>
-		<p>Наша мебель - ваше отражение</p>
-		<a href="catalog.htoml">Перейти в каталог</a>
+	<section class="all">
+		<h1 class="all__title">Всё, чего заслуживает ваш дом</h1>
+		<p class="all__subtitle">Наша мебель - ваше отражение</p>
+		<a class="all__link" href="catalog.htoml">Перейти в каталог</a>
 	</section>
-	<section>
-		<h2>Специальные предложения</h2>
+	<section class="special">
+		<h2 class="special__header">Специальные предложения</h2>
 		<img src="./img/product1.jpg" alt="Product1">
-		<h3>Кресло VILORA</h3>
-		<p>Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань.</p>
-		<p>21 000</p>
-		<p>28 000</p>
+		<h3 class="special__title">Кресло VILORA</h3>
+		<p class="special__subtitle">Мягкое и уютное, аккуратное и стильное. Упругие подушки, сиденья и приятная на ощупь ткань.</p>
+		<p class="special__final-price">21 000</p>
+		<p  class="special__initial-price">28 000</p>
 	</section>
-	<footer>
+	<footer class="footer">
 		<img src="./img/logo.svg" alt="Logo">
-		<h4>Меню</h4>
-		<a href="">Главная</a>
-		<a href="">Католог</a>
-		<a href="">Корзина</a>
-		<h4>Контакты</h4>
-		<a href="">+7 908 800 80 80</a>
-		<a href="">help@interier.com</a>
-		<a href=""><img src="./img/inst.svg" alt=""></a>
-		<a href=""><img src="./img/twitter.svg" alt=""></a>
-		<a href=""><img src="./img/facebook.svg" alt=""></a>
-		<form action="#">
-			<p>Получайте наши новости и обновления </p>
-			<input type="email">
-			<button>Подписаться</button>
+		<h4 class="footer__options">Меню</h4>
+		<a href="#" class="footer__link">Главная</a>
+		<a href="#" class="footer__link">Католог</a>
+		<a href="#" class="footer__link">Корзина</a>
+		<h4 class="footer__options">Контакты</h4>
+		<a href="#" class="footer__link">+7 908 800 80 80</a>
+		<a href="#" class="footer__link">help@interier.com</a>
+		<a href="#"><img src="./img/inst.svg" alt=""></a>
+		<a href="#"><img src="./img/twitter.svg" alt=""></a>
+		<a href="#"><img src="./img/facebook.svg" alt=""></a>
+		<form class="footer__form" action="#">
+			<p class="footer__form-text">Получайте наши новости и обновления </p>
+			<input class="footer__form-email" type="email" >
+			<button class="footer__form-button">Подписаться</button>
 		</form>
 	</footer>
 
