@@ -1,3 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	height: 76px;
+}
+
 .navigation__link{
 	tab-size: 16px;
 	line-height: 20px;
@@ -7,11 +16,13 @@
 	font-size: 64px;
 	font-weight: 600;
 	line-height: 70px;
+	margin: 64px 0 16px 0;
 }
 
 .all__subtitle{
 	font-size: 24px;
 	line-height: 32px;
+	margin: 0 0 16px 0;
 }
 
 .all__link{
@@ -24,6 +35,7 @@
 	line-height: 59px;
 	font-weight: 600;
 	color: #000000;
+	margin: 0 0 32px 0;
 }
 
 .special__title{
@@ -31,12 +43,14 @@ font-size: 24px;
 font-weight: 500;
 line-height: 29px;
 color: #000000;
+margin: 0 0 8px 0;
 }
 
 .special__subtitle{
 	font-size: 14px;
 	line-height: 17px;
 	color: #888888;
+	margin: 0 0 12px 0;
 }
 
 .special__final-price{
@@ -61,6 +75,10 @@ color: #000000;
 	color: #000000;
 }
 
+.footer__options-menu{
+	margin: 0 0 12px 0;
+}
+
 .footer__link{
 	font-size: 14px;
 	font-weight: 500;
@@ -69,10 +87,15 @@ color: #000000;
 	text-decoration: none;
 }
 
+.footer__link-inderlining:hover{
+	text-decoration-line: underline;
+}
+
 .footer__form-text{
 	font-size: 14px;
 	line-height: 16px;
 	color: #000000;
+	margin: 0 0 16px 0;
 }
 
 .footer__form-email{
