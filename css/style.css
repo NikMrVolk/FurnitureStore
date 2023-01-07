@@ -4,12 +4,16 @@
 	box-sizing: border-box;
 }
 
+body{
+	font-family: 'Montserrat';
+}
+
 a{
 	text-decoration: none;
 }
 
 .center{
-	padding: 0 calc(50vw - 600px);
+	padding: 0 calc(50vw - 610px);
 }
 
 .top{
