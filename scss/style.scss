@@ -17,7 +17,7 @@ a{
 }
 
 .center{
-	padding: 0 calc(50vw - 610px);
+	padding: 0 calc(50% - 600px);
 }
 
 .top{
@@ -26,7 +26,6 @@ a{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	margin: 0 0 64px 0;
 }
 
 .header{
@@ -72,6 +71,7 @@ a{
 		line-height: 70px;
 		margin: 0 0 16px 0;
 		color: $color-text;
+		max-width: 792px;
 	}
 	&__subtitle{
 		font-size: 24px;
@@ -88,9 +88,8 @@ a{
 }
 
 .for{
-	padding-top: 64px;
-	padding-bottom: 64px;
-	height: 1080px;
+	margin: 64px 0;
+	height: 952px;
 	&__title{
 		font-weight: 600;
 		font-size: 48px;
@@ -100,6 +99,7 @@ a{
 	&__wrapper{
 		display: grid;
 		gap: 32px;
+		row-gap: 31px;
 		grid-template-columns: repeat(12, 1fr);
 	}
 	&__item{
@@ -346,40 +346,31 @@ a{
 }
 
 .main-cart{
-	padding-top: 64px;
-	padding-bottom: 64px;
-}
-
-.main-cart__nav-cart{
+margin: 64px 0;
+&__nav-cart{
 	display: flex;
 	justify-content: space-between;
 }
-
-.main-cart__nav-cart{
+&__nav-cart{
 	margin: 0 0 32px 0;
 }
-
-.main-cart__link{
+&__link{
 	list-style-type: none;
 }
-
-.main-cart__link:not(:last-child)::after {
+&__link:not(:last-child)::after {
 	content: '/';
 	padding-left: 8px;
 	padding-right: 8px;
 }
-
-.main-cart__link{
+&__link{
 	font-size: 16px;
 	line-height: 32px;
 	color: #000000;
 }
-
-.main-cart__form-select-wrapper{
+&__form-select-wrapper{
 	position: relative;
 }
-
-.main-cart__form-select-wrapper::before{
+&__form-select-wrapper::before{
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -392,8 +383,7 @@ a{
 	border-width: 11px 10px 0 10px;
 	border-color: #000000 transparent transparent transparent;
 }
-
-.main-cart__form-select{
+&__form-select{
 	font-size: 16px;
 	line-height: 20px;
 	width: 288px;
@@ -406,9 +396,11 @@ a{
 	appearance: none;
 	outline: none;
 }
+}
 
 .cart__row{
 	row-gap: 48px;
+	margin: 0 0 32px 0;
 }
 
 /* Start of basket styles */
@@ -418,8 +410,7 @@ a{
 }
 
 .basket {
-	padding-top: 64px;
-	padding-bottom: 64px;
+margin: 64px 0;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap: 33px;
@@ -572,5 +563,12 @@ a{
 	}
 }
 
+.special__row-basket{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+}
+
+@import 'tablet'
 
 
