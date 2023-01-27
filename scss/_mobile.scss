@@ -1,0 +1,128 @@
+@media (max-width: 768px) {
+	.center{
+		padding: 0 16px;
+	}
+	.header{
+		padding-top: 32px;
+		border:none;
+		margin: 0 0 29px 0;
+		&__img-logo{
+			width: 99px;
+		}
+		&__form{
+			display: none;
+		}
+		&__navigation{
+			display: none;
+		}
+		&__nav-mobile{
+			display: block;
+			display: flex;
+			gap: 32px;
+			align-items: center;
+		}
+	}
+	.all{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__title{
+			font-size: 48px;
+			line-height: 59px;
+			text-align: center;
+		}
+		&__subtitle{
+			font-size: 16px;
+			line-height: 32px;
+			text-align: center;
+		}
+		&__link{
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+	.for{
+		margin: 32px 0;
+		&__title{
+			font-size: 24px;
+			line-height: 29px;
+		}
+		&__wrapper{
+			grid-template-columns: repeat(4, 1fr);
+			gap: 16px;
+		}
+		&__item{
+			height: 375px;
+			grid-column: 1 / -1;
+			font-size: 28px;
+			line-height: 34px;
+		}
+		&__item-big{
+			height: 244px;
+		}
+	}
+	.special{
+		margin-bottom: 36px;
+		&__header{
+			font-size: 24px;
+			line-height: 29px;
+		}
+		&__row{
+			gap: 32px;
+			justify-content: center;
+		}
+		&__title{
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__description{
+			margin-bottom: 8px;
+		}
+		&__price{
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	.catalog{
+		margin-bottom: 32px;
+		&__header{
+			font-size: 24px;
+			line-height: 29px;
+		}
+		&__row{
+			gap: 32px;
+			margin-bottom: 36px;
+			justify-content: center;
+		}
+		&__title{
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__subtitle{
+			margin-bottom: 9px;
+		}
+		&__price{
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+	.footer{
+		&__subrow{
+			flex-wrap: wrap;
+			gap: 32px;
+			justify-content: center;
+		}
+		&__center-row{
+			justify-content: space-between;
+		}
+		&__form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__center-row{
+			gap: 100px;
+		}
+	}
+}

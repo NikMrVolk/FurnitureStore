@@ -62,6 +62,9 @@ a{
 		font-style: normal;
 		color: $color-text;
 	}
+	&__nav-mobile{
+		display: none;
+	}
 }
 
 .all{
@@ -89,7 +92,7 @@ a{
 
 .for{
 	margin: 64px 0;
-	height: 952px;
+
 	&__title{
 		font-weight: 600;
 		font-size: 48px;
@@ -427,8 +430,6 @@ margin: 64px 0;
 	padding: 0 27px 14px 5px;
 	padding-bottom: 14px;
 	}
-	&__content-products {
-	}
 	&__content-product {
 		border-top: 0.5px solid #CACDD8;
 		padding: 25px 0 32px 0;
@@ -569,6 +570,6 @@ margin: 64px 0;
 	gap: 32px;
 }
 
-@import 'tablet'
-
+@import 'tablet';
+@import 'mobile';
 
