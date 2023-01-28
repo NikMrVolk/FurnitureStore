@@ -243,6 +243,9 @@ a{
 		color: #000000;
 		text-decoration-line: underline;
 	}
+	&__for-mobile{
+		display: none;
+	}
 }
 
 .footer{
@@ -333,7 +336,7 @@ a{
 /* Start of cart styles */
 
 .top-cart{
-	height: 415px;
+	height: 400px;
 	background: url(../img/Cart/BG.png) center / cover no-repeat;
 }
 
@@ -349,61 +352,68 @@ a{
 }
 
 .main-cart{
-margin: 64px 0;
-&__nav-cart{
-	display: flex;
-	justify-content: space-between;
-}
-&__nav-cart{
-	margin: 0 0 32px 0;
-}
-&__link{
-	list-style-type: none;
-}
-&__link:not(:last-child)::after {
-	content: '/';
-	padding-left: 8px;
-	padding-right: 8px;
-}
-&__link{
-	font-size: 16px;
-	line-height: 32px;
-	color: #000000;
-}
-&__form-select-wrapper{
-	position: relative;
-}
-&__form-select-wrapper::before{
-	content: '';
-	position: absolute;
-	top: 50%;
-	right: 15px;
-	transform: translateY(-50%);
-	display: block;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 11px 10px 0 10px;
-	border-color: #000000 transparent transparent transparent;
-}
-&__form-select{
-	font-size: 16px;
-	line-height: 20px;
-	width: 288px;
-	height: 41px;
-	border: 1px solid #C4C4C4;
-	border-radius: 20px;
-	padding: 0 14px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	outline: none;
-}
+	margin: 64px 0;
+	&__nav-cart{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav-cart{
+		margin: 0 0 32px 0;
+	}
+	&__link{
+		list-style-type: none;
+	}
+	&__link:not(:last-child)::after {
+		content: '/';
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	&__link{
+		font-size: 16px;
+		line-height: 32px;
+		color: #000000;
+	}
+	&__form-select-wrapper{
+		position: relative;
+		width: 288px;
+		&::after{
+			content: "";
+			display: block;
+			border-style: solid;
+			border-width: 6px 5px 0 5px;
+			border-color: #000 transparent transparent transparent;
+			pointer-events: none;
+			position: absolute;
+			top: 50%;
+			right: 1rem;
+			z-index: 1;
+			margin-top: -3px;
+		}
+	}
+	&__form-select{
+		display: block;
+		width: 100%; /* от ширины блока div */
+		padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
+		background: none; /* убираем фон */
+		-webkit-appearance: none;/* Chrome */
+		-moz-appearance: none;/* Firefox */
+		appearance: none;/* убираем дефолнтные стрелочки */
+		font-family: inherit;/* наследует от родителя */
+		font-size: 1rem;
+		color: #444;
+		border: 1px solid #C4C4C4;
+		border-radius: 20px;
+	}
 }
 
-.cart__row{
+.cart{
+	&__row{
 	row-gap: 48px;
 	margin: 0 0 32px 0;
+	}
+	&__title-mobile{
+		display: none;
+	}
 }
 
 /* Start of basket styles */

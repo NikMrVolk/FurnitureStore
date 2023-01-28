@@ -51,6 +51,12 @@
 	.basket-form{
 		height: 556px;
 	}
+	.product{
+		&__button_blak{
+			background: #000000;
+			color: $color-text;
+		}
+	}
 }
 
 @media (max-width: 834px) {
