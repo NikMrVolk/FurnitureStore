@@ -6,6 +6,10 @@
 		&__title{
 			max-width: 786px;
 		}
+		&__link{
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
 	}
 	.for{
 		&__wrapper{
@@ -52,9 +56,11 @@
 		height: 556px;
 	}
 	.product{
-		&__button_blak{
+		&__button{
+			&_blak{
 			background: #000000;
 			color: $color-text;
+			}
 		}
 	}
 }

@@ -1,3 +1,31 @@
+@keyframes wobble-ver-left {
+	0%,
+	100% {
+	transform: translateY(0) rotate(0);
+	transform-origin: 50% 50%;
+	}
+	15% {
+	transform: translateY(-30px) rotate(-6deg);
+	}
+	30% {
+	transform: translateY(15px) rotate(6deg);
+	}
+	45% {
+	transform: translateY(-15px) rotate(-3.6deg);
+	background: ghostwhite;
+	}
+	60% {
+	transform: translateY(9px) rotate(2.4deg);
+	}
+	75% {
+	transform: translateY(-6px) rotate(-1.2deg);
+	}
+}
+
+.wobble-ver-left {
+	animation: wobble-ver-left 0.8s both;
+}
+
 $color-text: #FFFFFF;
 $width-site: 1200px;
 $gap-product: 32px;
@@ -61,6 +89,10 @@ a{
 		line-height: 20px;
 		font-style: normal;
 		color: $color-text;
+		&:hover{
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
 	}
 	&__nav-mobile{
 		display: none;
@@ -86,7 +118,10 @@ a{
 		font-size: 16px;
 		line-height: 24px;
 		color: $color-text;
-		text-decoration: underline;
+		&:hover{
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
 	}
 }
 
@@ -151,6 +186,12 @@ a{
 		width: 378px;
 		display: flex;
 		flex-direction: column;
+		padding: 8px;
+		transition: transform .4s, box-shadow .4s;
+		&:hover{
+			box-shadow: 0 0 5px #888888;
+			transform: scale(1.05);
+		}
 	}
 	&__header{
 		font-size: 48px;
@@ -213,6 +254,12 @@ a{
 	}
 	&__column{
 		width: 378px;
+		padding: 8px;
+		transition: transform .4s, box-shadow .4s;
+		&:hover{
+			box-shadow: 0 0 5px #888888;
+			transform: scale(1.05);
+		}
 	}
 	&__image{
 		width: 100%;
@@ -240,8 +287,11 @@ a{
 	&__link{
 		font-size: 16px;
 		line-height: 24px;
-		color: #000000;
-		text-decoration-line: underline;
+		color: #888888;
+		&:hover{
+			color: #000000;
+			text-decoration-line: underline;
+		}
 	}
 	&__for-mobile{
 		display: none;
@@ -288,6 +338,7 @@ a{
 	}
 	&__link-inderlining:hover{
 		text-decoration-line: underline;
+		color:#000000
 	}
 	&__contacts-row{
 		display: flex;
@@ -296,10 +347,16 @@ a{
 	&__contacts-column-social{
 		display: flex;
 		align-items: center;
-		gap: 14px;
+		gap: 23px;
+	}
+	&__svg path{
+		transition: fill .8s;
+	}
+	&__svg:hover path{
+		fill:#000;
 	}
 	&__form-text{
-		font-size: 14px;
+		font-size: 12px;
 		line-height: 16px;
 		color: #000000;
 		margin: 0 0 16px 0;
@@ -330,8 +387,14 @@ a{
 		font-size: 15px;
 		line-height: 18px;
 		color: #000000;
+		transition: background .4s, color .4s;
+		&:hover{
+			background: #000000;
+			color: $color-text;
+		}
 	}
 }
+
 
 /* Start of cart styles */
 
@@ -360,15 +423,26 @@ a{
 	&__nav-cart{
 		margin: 0 0 32px 0;
 	}
+	&__links {
+		list-style: none;
+		& li{
+			display: inline;
+		}
+		& li+li:before {
+			content: "/\00a0";
+			color: black;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+		& li a {
+			text-decoration: none;
+		}
+		& li a:hover {
+			text-decoration: underline;
+		}
+	}
 	&__link{
 		list-style-type: none;
-	}
-	&__link:not(:last-child)::after {
-		content: '/';
-		padding-left: 8px;
-		padding-right: 8px;
-	}
-	&__link{
 		font-size: 16px;
 		line-height: 32px;
 		color: #000000;
@@ -522,6 +596,11 @@ margin: 64px 0;
 		font-size: 14px;
 		line-height: 17px;
 		color: #020202;
+		transition: background .7s, color .7s;
+		&_blak:hover{
+			background: #000000;
+			color: $color-text;
+		}
 	}
 }
 
@@ -571,6 +650,11 @@ margin: 64px 0;
 		line-height: 20px;
 		border-radius: 20px;
 		background: #F7F6F6;
+		transition: color .7s;
+		&:hover{
+			background: #000000;
+			color: $color-text;
+		}
 	}
 }
 

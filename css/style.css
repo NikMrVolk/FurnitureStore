@@ -1,4 +1,53 @@
 @charset "UTF-8";
+@-webkit-keyframes wobble-ver-left {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateY(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateY(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateY(-15px) rotate(-3.6deg);
+    background: ghostwhite;
+  }
+  60% {
+    transform: translateY(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-ver-left {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateY(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateY(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateY(-15px) rotate(-3.6deg);
+    background: ghostwhite;
+  }
+  60% {
+    transform: translateY(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1.2deg);
+  }
+}
+.wobble-ver-left {
+  -webkit-animation: wobble-ver-left 0.8s both;
+          animation: wobble-ver-left 0.8s both;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +109,11 @@ a {
   font-style: normal;
   color: #FFFFFF;
 }
+.header__navigation-link:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
 .header__nav-mobile {
   display: none;
 }
@@ -82,7 +136,11 @@ a {
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+}
+.all__link:hover {
   text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 .for {
@@ -146,6 +204,12 @@ a {
   width: 378px;
   display: flex;
   flex-direction: column;
+  padding: 8px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.special__column:hover {
+  box-shadow: 0 0 5px #888888;
+  transform: scale(1.05);
 }
 .special__header {
   font-size: 48px;
@@ -209,6 +273,12 @@ a {
 }
 .catalog__column {
   width: 378px;
+  padding: 8px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.catalog__column:hover {
+  box-shadow: 0 0 5px #888888;
+  transform: scale(1.05);
 }
 .catalog__image {
   width: 100%;
@@ -236,6 +306,9 @@ a {
 .catalog__link {
   font-size: 16px;
   line-height: 24px;
+  color: #888888;
+}
+.catalog__link:hover {
   color: #000000;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -286,6 +359,7 @@ a {
 .footer__link-inderlining:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  color: #000000;
 }
 .footer__contacts-row {
   display: flex;
@@ -294,10 +368,16 @@ a {
 .footer__contacts-column-social {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 23px;
+}
+.footer__svg path {
+  transition: fill 0.8s;
+}
+.footer__svg:hover path {
+  fill: #000;
 }
 .footer__form-text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   color: #000000;
   margin: 0 0 16px 0;
@@ -328,6 +408,11 @@ a {
   font-size: 15px;
   line-height: 18px;
   color: #000000;
+  transition: background 0.4s, color 0.4s;
+}
+.footer__form-button:hover {
+  background: #000000;
+  color: #FFFFFF;
 }
 
 /* Start of cart styles */
@@ -357,15 +442,26 @@ a {
 .main-cart__nav-cart {
   margin: 0 0 32px 0;
 }
-.main-cart__link {
-  list-style-type: none;
+.main-cart__links {
+  list-style: none;
 }
-.main-cart__link:not(:last-child)::after {
-  content: "/";
+.main-cart__links li {
+  display: inline;
+}
+.main-cart__links li + li:before {
+  content: "/ ";
+  color: black;
   padding-left: 8px;
   padding-right: 8px;
 }
+.main-cart__links li a {
+  text-decoration: none;
+}
+.main-cart__links li a:hover {
+  text-decoration: underline;
+}
 .main-cart__link {
+  list-style-type: none;
   font-size: 16px;
   line-height: 32px;
   color: #000000;
@@ -517,6 +613,11 @@ a {
   font-size: 14px;
   line-height: 17px;
   color: #020202;
+  transition: background 0.7s, color 0.7s;
+}
+.product__button_blak:hover {
+  background: #000000;
+  color: #FFFFFF;
 }
 
 .basket-form {
@@ -566,6 +667,11 @@ a {
   line-height: 20px;
   border-radius: 20px;
   background: #F7F6F6;
+  transition: color 0.7s;
+}
+.basket-form__button:hover {
+  background: #000000;
+  color: #FFFFFF;
 }
 
 .special__row-basket {
@@ -580,6 +686,11 @@ a {
   }
   .all__title {
     max-width: 786px;
+  }
+  .all__link {
+    text-decoration: underline;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
   }
   .for__wrapper {
     gap: 30px;
