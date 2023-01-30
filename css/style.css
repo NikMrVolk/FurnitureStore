@@ -651,6 +651,7 @@ a {
   font-size: 14px;
   line-height: 17px;
   margin: 0 0 41px 0;
+  padding: 0 10px;
 }
 .basket-form__input:last-child {
   margin: 0;
@@ -738,6 +739,9 @@ a {
 @media (max-width: 834px) {
   .center {
     padding: 0 24px;
+  }
+  .footer__row {
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -932,5 +936,10 @@ a {
   }
   .special__row-basket {
     justify-content: center;
+  }
+}
+@media (max-width: 330px) {
+  .footer__center-row {
+    gap: 80px;
   }
 }
